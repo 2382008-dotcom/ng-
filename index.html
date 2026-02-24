@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Câu lạc bộ THPT Võ Nguyên Giáp</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+/* ===== TABLE LỊCH HOẠT ĐỘNG ===== */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+    background:white;
+    color:#333;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+th, td{
+    border:2px solid #ff3c00;
+    padding:12px;
+    text-align:center;
+}
+
+th{
+    background:linear-gradient(90deg,#ff0000,#ff7300);
+    color:white;
+    font-weight:600;
+}
+
+tr:nth-child(even){
+    background:#ffe5d9;
+}
+
+tr:hover{
+    background:#ffd2bf;
+}
+.navbar ul{
+    flex-wrap:wrap;
+}
+.card img{
+    width:100%;
+    max-height:220px;
+    object-fit:cover;
+    border-radius:15px;
+    margin-top:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    background:linear-gradient(90deg,#ff0000,#ff7300);
+    box-shadow:0 5px 20px rgba(0,0,0,0.4);
+    z-index:1000;
+}
+
+.navbar .logo{
+    font-weight:700;
+    font-size:20px;
+}
+
+.navbar ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+.navbar ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.navbar ul li a:hover{
+    color:#fff200;
+}
+
+/* đẩy header xuống vì navbar fixed */
+
+header{
+    margin-top:80px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#ff512f,#dd2476);
+    min-height:100vh;
+    color:white;
+}
+
+/* HEADER */
+
+header{
+    text-align:center;
+    padding:60px 20px;
+    background: linear-gradient(90deg,#ff6a00,#ff0000);
+    box-shadow:0 10px 40px rgba(0,0,0,0.4);
+}
+
+header h1{
+    font-size:42px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    text-shadow:0 5px 20px rgba(0,0,0,0.5);
+}
+
+header p{
+    margin-top:10px;
+    font-size:18px;
+    opacity:0.9;
+}
+
+/* GRID CLB */
+
+.container{
+    padding:60px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:40px;
+}
+
+/* CARD */
+
+.card{
+    background: linear-gradient(145deg,#ff3c00,#ff7300);
+    border-radius:25px;
+    padding:30px;
+    text-align:center;
+    transition:0.4s;
+    box-shadow:0 20px 50px rgba(0,0,0,0.4);
+    position:relative;
+    overflow:hidden;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    width:200%;
+    height:200%;
+    top:-50%;
+    left:-50%;
+    background: radial-gradient(circle,rgba(255,255,255,0.15),transparent 70%);
+    transform:rotate(25deg);
+}
+
+.card:hover{
+    transform:translateY(-15px) scale(1.05);
+    box-shadow:0 30px 70px rgba(0,0,0,0.6);
+}
+
+.card h2{
+    margin-bottom:15px;
+    font-size:22px;
+    color:#fff200;
+    text-shadow:0 4px 15px rgba(0,0,0,0.5);
+}
+
+.card p{
+    font-size:14px;
+    line-height:1.6;
+}
+
+/* BUTTON */
+
+.register{
+    text-align:center;
+    margin:60px 0;
+}
+
+.register button{
+    padding:15px 50px;
+    font-size:18px;
+    font-weight:600;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    background:linear-gradient(90deg,#ff0000,#ff7300);
+    color:white;
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+    transition:0.3s;
+}
+
+.register button:hover{
+    transform:scale(1.1);
+    box-shadow:0 20px 50px rgba(0,0,0,0.7);
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#990000;
+    font-size:14px;
+    letter-spacing:1px;
+}
+
+</style>
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="logo">CLB VNG</div>
+    <ul>
+        <li><a href="#stem">STEM</a></li>
+        <li><a href="#vanhoa">Văn hóa đọc</a></li>
+        <li><a href="#songxanh">Sống xanh</a></li>
+        <li><a href="#tienganh">Tiếng Anh</a></li>
+        <li><a href="#thethao">Thể thao</a></li>
+        <li><a href="#phapluat">Pháp luật</a></li>
+        <li><a href="#vangnhe">Văn nghệ</a></li>
+    </ul>
+</nav>
+
+<header>
+    <h1>Câu lạc bộ Trường THPT Võ Nguyên Giáp</h1>
+    
+</header>
+
+<section class="container">
+
+<!-- STEM -->
+<section id="stem">
+<div class="card">
+<div class="title">CLB STEM</div>
+<p><strong>Tôn chỉ:</strong> Phát triển tư duy khoa học và sáng tạo công nghệ.</p>
+<p><strong>Tiêu chí:</strong> Đam mê nghiên cứu, tư duy logic, chủ động học hỏi.</p>
+
+<a href="https://ibb.co/FkcTC26W"><img src="https://i.ibb.co/RGtwdf2S/IMG-1771434493322-1771434588527.jpg" alt="IMG-1771434493322-1771434588527" border="0"></a>
+</div>
+</section>
+
+<!-- Văn hóa đọc -->
+<section id="vanhoa">
+<div class="card">
+<div class="title">CLB Văn hóa đọc</div>
+<p><strong>Tôn chỉ:</strong> Lan tỏa văn hóa đọc và phát triển tư duy phản biện.</p>
+<p><strong>Tiêu chí:</strong> Yêu sách, chia sẻ kiến thức, tham gia tích cực.</p>
+
+<a href="https://ibb.co/KzXvQfnr"><img src="https://i.ibb.co/yBXjMZ2Q/IMG-1771676369962-1771676385757.jpg" alt="IMG-1771676369962-1771676385757" border="0"></a>
+</div>
+</section>
+
+<!-- Sống xanh -->
+<section id="songxanh">
+<div class="card">
+<div class="title">CLB Sống xanh</div>
+<p><strong>Tôn chỉ:</strong> Bảo vệ môi trường học đường.</p>
+<p><strong>Tiêu chí:</strong> Trách nhiệm, hành động tích cực.</p>
+
+<a href="https://ibb.co/xt054b59"><img src="https://i.ibb.co/7d5y9DyM/CLB-SX-2.jpg" alt="CLB-SX-2" border="0"></a>
+</div>
+</section>
+
+<!-- Tiếng Anh -->
+<section id="tienganh">
+<div class="card">
+<div class="title">CLB Tiếng Anh</div>
+<p><strong>Tôn chỉ:</strong> Phát triển kỹ năng giao tiếp tiếng Anh.</p>
+<p><strong>Tiêu chí:</strong> Tự tin, chủ động, kiên trì.</p>
+
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+</div>
+</section>
+
+<!-- Thể thao -->
+<section id="thethao">
+<div class="card">
+<div class="title">CLB Thể thao</div>
+<p><strong>Tôn chỉ:</strong> Rèn luyện thể chất và tinh thần đồng đội.</p>
+<p><strong>Tiêu chí:</strong> Kỷ luật, bền bỉ, fair-play.</p>
+
+<a href="https://ibb.co/pv4TtL0G"><img src="https://i.ibb.co/svs40Vmk/IMG-1771676370099-1771676387907.jpg" alt="IMG-1771676370099-1771676387907" border="0"></a>
+</div>
+</section>
+
+<!-- Pháp luật -->
+<section id="phapluat">
+<div class="card">
+<div class="title">CLB Pháp luật</div>
+<p><strong>Tôn chỉ:</strong> Nâng cao hiểu biết pháp luật.</p>
+<p><strong>Tiêu chí:</strong> Trung thực, tư duy phản biện.</p>
+
+<a href="https://ibb.co/hR6HCn9H"><img src="https://i.ibb.co/279P5LhP/IMG-1771685159612-1771685209124.jpg" alt="IMG-1771685159612-1771685209124" border="0"></a>
+</div>
+</section>
+
+<!-- Văn nghệ -->
+<section id="vangnhe">
+<div class="card">
+<div class="title">CLB Văn nghệ</div>
+<p><strong>Tôn chỉ:</strong> Phát triển tài năng nghệ thuật.</p>
+<p><strong>Tiêu chí:</strong> Sáng tạo, tự tin biểu diễn.</p>
+
+<a href="https://ibb.co/JR5wXDCH"><img src="https://i.ibb.co/ynWcLHVq/Vannghe4.jpg" alt="Vannghe4" border="0"></a>
+</div>
+</section>
+<p>Lịch sinh hoạt chung: Chiều thứ 4 hằng tuần — 14h00</p>
+<table>
+<tr>
+<th>STT</th>
+<th>Tuần</th>
+<th>Câu lạc bộ</th>
+<th>Người phụ trách</th>
+</tr>
+<tr><td>1</td><td>1</td><td>CLB STEM</td><td>Phan Thị Điệp</td></tr>
+<tr><td>2</td><td>1</td><td>CLB Văn hóa đọc</td><td>Vũ Thị Lan Hương</td></tr>
+<tr><td>3</td><td>2</td><td>CLB Sống xanh</td><td>Nguyễn Thị Thúy Hằng</td></tr>
+<tr><td>4</td><td>2</td><td>CLB Pháp luật</td><td>Phạm Thị Tám</td></tr>
+<tr><td>5</td><td>3</td><td>CLB Văn nghệ</td><td>Nguyễn Thị Ly</td></tr>
+<tr><td>6</td><td>4</td><td>CLB Tiếng Anh</td><td>Nguyễn Thanh Nhã</td></tr>
+<tr><td>7</td><td>4</td><td>CLB Thể dục thể thao</td><td>Đỗ Tấn Khương</td></tr>
+</table>
+
+<div class="register">
+    <button>ĐĂNG KÝ THAM GIA</button>
+</div>
+
+<footer>
+    © 2026 Trường THPT Võ Nguyên Giáp
+</footer>
+
+</body>
+</html>
